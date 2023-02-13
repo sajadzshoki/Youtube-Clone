@@ -5,7 +5,7 @@ import SideBar from "./SideBar";
 import Videos from "./Videos";
 const Feed = () => {
   const [selectedCategory, setSelectedCategory] = useState("New");
-  const [videos, setVideos] = useState("")
+  const [videos, setVideos] = useState([]);
   useEffect(() => {
     fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
     .then((data)=>setVideos(data.items))
@@ -29,7 +29,7 @@ const Feed = () => {
           variant="body2"
           sx={{ mt: 1.5, color: "#fff" }}
         >
-           Copyright &copy; 2023 Sajad Shokraei
+           Copyright &copy; 2023 Sajad
         </Typography>
       </Box>
       {/* ------------------------------- Right Side ------------------------------- */}
@@ -38,7 +38,7 @@ const Feed = () => {
           variant="h4"
           fontWeight="bold"
           mb={2}
-          sx={{ color: "white" }}
+          sx={{ color: "white"}}
         >
           {selectedCategory}
           <span style={{ color: "red" }}> videos</span>
