@@ -14,13 +14,16 @@ const Navbar = () => {
       sx={{
         position: "sticky",
         top: "0",
-        background: "#090909",
+        background: "#151515",
         justifyContent: "space-between",
+        zIndex: 100
       }}
     >
       <Link to="/" style={{ display: "flex", alignItems: "center" }}>
         <img src={logo} alt="logo" height={45} />
       </Link>
+      <Stack direction="row" alignItems="center">
+
       <SearchBar />
       <Typography
         variant="h5"
@@ -29,9 +32,10 @@ const Navbar = () => {
           display: { md: "block", xs: "none" },
           fontWeight: "bold",
         }}
-      >
-        Welcome to My <span style={{ color: "red" }}>Youtube </span>Clone
+        >
+        Welcome to <span style={{ color: "red" }}>Youtube </span>Clone
       </Typography>
+        </Stack>
     </Stack>
   );
 };

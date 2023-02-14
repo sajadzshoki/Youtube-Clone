@@ -3,15 +3,17 @@ import React from "react";
 import ChannelCard from './ChannelCard'
 import VideoCard from "./VideoCard";
 
-const Videos = ({ videos }) => {
+const Videos = ({ videos ,direction}) => {
+  if (!videos?.length) return "Loading...";
   return (
     <Stack
-      direction="row"
+      direction={"row"||direction}
       flexWrap="wrap"
       alignItems="space-evenly"
       gap={1}
       rowGap={3}
       sx={{ justifyContent: { xs: "center", md: "space-evenly" } }}
+      
     >
       {videos.map((item, idx) => (
         <Box key={idx}>

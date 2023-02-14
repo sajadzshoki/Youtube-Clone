@@ -10,6 +10,7 @@ const SideBar = ({ selectedCategory, setSelectedCategory }) => {
         height: { sx: "auto", md: "95%" },
         flexDirection: { md: "column" },
       }}
+      className="sidebar"
     >
       {categories.map((category) => (
         <button

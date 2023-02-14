@@ -11,13 +11,13 @@ import SearchFeed from "./components/SearchFeed";
 const App = () => {
   return (
     <BrowserRouter>
-      <Box sx={{backgroundColor:"#090909"}}>
+      <Box sx={{backgroundColor:"#151515" }} >
         <Navbar/>
         <Routes>
           <Route path="/" exact element={<Feed/>}/>
           <Route path="/video/:id" element={<VideoDetail/>}/>
           <Route path="/channel/:id" element={<ChannelDetail/>}/>
-          <Route path="/video/:id" element={<SearchFeed/>}/>
+          <Route path="/search/:id" element={<SearchFeed/>}/>
           
         </Routes>
       </Box>
