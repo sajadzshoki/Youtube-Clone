@@ -5,6 +5,7 @@ import {  useParams } from "react-router-dom";
 import ChannelCard from "./ChannelCard";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 import Videos from "./Videos";
+import Loader from "./Loader";
 
 
 const ChannelDetail = () => {
@@ -18,7 +19,7 @@ const ChannelDetail = () => {
     fetchFromAPI(`search?channelId=${id}&part=snippet&order=date`)
     .then((data)=>setVideos(data?.items))
   },[id])
-  if (!channelDetail?.snippet) return "Loading..."
+  if (!channelDetail?.snippet) return <Loader/>
   return (
     <Box minHeight="95vh">
       <Box>
