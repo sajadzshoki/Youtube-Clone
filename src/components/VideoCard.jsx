@@ -3,7 +3,11 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import { demoChannelTitle, demoChannelUrl, demoThumbnailUrl, demoVideoUrl } from "../utils/constants";
+// import Loader from "./Loader";
 const VideoCard = ({video: {id: { videoId },snippet,},}) => {
+  if(!snippet?.thumbnails?.high?.url){
+    return snippet?.thumbnails?.low?.url
+  }
   return (
     <Card sx={{ width: {xs:"99vw",sm:"320px"}, boxShadow: "none", borderRadius: {xs:0,sm:3},background: "#151515"}} className="video-card">
       <Link to={videoId ? `/video/${videoId}` : `/video/cV2gBU6hKfY`}>
