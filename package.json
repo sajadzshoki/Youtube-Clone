@@ -16,10 +16,13 @@
   },
   "scripts": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "predeploy": "gh-pages -d build",
     "deploy": "gh-pages -d build",
 =======
 >>>>>>> parent of c84b27e (github pages)
+=======
+>>>>>>> parent of 2785836 (gh pages)
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
